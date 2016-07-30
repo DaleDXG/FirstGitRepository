@@ -1,0 +1,31 @@
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+# C#
+*.exe
+*.exe.config
+*.deploy
+*.manifest
+*.pdb
+*.dll
+*.resources
+*.application
+dist
+build
+
+#Special
+CollegeNet/CollegeNet/obj/Debug/*
+CollegeNet/CollegeNet/bin/Debug/*
+CollegeNet/CollegeNet/bin/Release/*
+
+# My configurations:

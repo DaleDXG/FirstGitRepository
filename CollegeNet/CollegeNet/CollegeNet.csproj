@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0119852A-B45C-49AC-A761-15DBCD567EF0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CollegeNet</RootNamespace>
+    <AssemblyName>CollegeNet</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>G:\生涯现役\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5F13DB9B4B89958C5F6226DB3A9362F09586F983</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CollegeNet_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Allen.Page">
+      <HintPath>.\Allen.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonHelper.cs" />
+    <Compile Include="Windows\Front.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Front.Designer.cs">
+      <DependentUpon>Front.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUser.cs" />
+    <Compile Include="PrintDGV.cs" />
+    <Compile Include="Windows\PrintOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\PrintOptions.designer.cs">
+      <DependentUpon>PrintOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SubForm\UserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\SubForm\UserInfo.Designer.cs">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SubForm\GuZhangXinXi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\SubForm\GuZhangXinXi.Designer.cs">
+      <DependentUpon>GuZhangXinXi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Qita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Qita.Designer.cs">
+      <DependentUpon>Qita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Tongji\Anrihuizong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Tongji\Anrihuizong.Designer.cs">
+      <DependentUpon>Anrihuizong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Tongji\Ansushetongji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Tongji\Ansushetongji.Designer.cs">
+      <DependentUpon>Ansushetongji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Tongji\Anxueshengtongji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Tongji\Anxueshengtongji.Designer.cs">
+      <DependentUpon>Anxueshengtongji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Tongji\Anyunyingshangtongji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Tongji\Anyunyingshangtongji.Designer.cs">
+      <DependentUpon>Anyunyingshangtongji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SubForm\Weiruwangsushexiangqing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\SubForm\Weiruwangsushexiangqing.Designer.cs">
+      <DependentUpon>Weiruwangsushexiangqing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Chaxun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Chaxun.Designer.cs">
+      <DependentUpon>Chaxun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="Windows\Tongji\Gaikuangshuju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Tongji\Gaikuangshuju.Designer.cs">
+      <DependentUpon>Gaikuangshuju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Tongji\Yuejietongji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Tongji\Yuejietongji.Designer.cs">
+      <DependentUpon>Yuejietongji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Yvjing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Yvjing.Designer.cs">
+      <DependentUpon>Yvjing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SubForm\Xueshengxinxi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\SubForm\Xueshengxinxi.Designer.cs">
+      <DependentUpon>Xueshengxinxi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SubForm\YeWuXinXi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\SubForm\YeWuXinXi.Designer.cs">
+      <DependentUpon>YeWuXinXi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SubForm\ZiFeiXinXi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\SubForm\ZiFeiXinXi.Designer.cs">
+      <DependentUpon>ZiFeiXinXi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\winLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\winLogin.Designer.cs">
+      <DependentUpon>winLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contrallor\YeWuCtrl.cs" />
+    <EmbeddedResource Include="Windows\Front.resx">
+      <DependentUpon>Front.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\PrintOptions.resx">
+      <DependentUpon>PrintOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\SubForm\UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\SubForm\GuZhangXinXi.resx">
+      <DependentUpon>GuZhangXinXi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Qita.resx">
+      <DependentUpon>Qita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Chaxun.resx">
+      <DependentUpon>Chaxun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Windows\SubForm\Weiruwangsushexiangqing.resx">
+      <DependentUpon>Weiruwangsushexiangqing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\SubForm\Xueshengxinxi.resx">
+      <DependentUpon>Xueshengxinxi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\SubForm\ZiFeiXinXi.resx">
+      <DependentUpon>ZiFeiXinXi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Tongji\Anrihuizong.resx">
+      <DependentUpon>Anrihuizong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Tongji\Ansushetongji.resx">
+      <DependentUpon>Ansushetongji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Tongji\Anxueshengtongji.resx">
+      <DependentUpon>Anxueshengtongji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Tongji\Anyunyingshangtongji.resx">
+      <DependentUpon>Anyunyingshangtongji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Tongji\Gaikuangshuju.resx">
+      <DependentUpon>Gaikuangshuju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Tongji\Yuejietongji.resx">
+      <DependentUpon>Yuejietongji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\winLogin.resx">
+      <DependentUpon>winLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Yvjing.resx">
+      <DependentUpon>Yvjing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\SubForm\YeWuXinXi.resx">
+      <DependentUpon>YeWuXinXi.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CollegeNet_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\Ansushetongji.datasource" />
+    <None Include="Properties\DataSources\Anxueshengtongji.datasource" />
+    <None Include="Properties\DataSources\Anyunyingshangtongji.datasource" />
+    <None Include="Properties\DataSources\Chaxun.datasource" />
+    <None Include="Properties\DataSources\CollegeNet.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\CollegeNet.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\CommonHelper.datasource" />
+    <None Include="Properties\DataSources\Gaikuangshuju.datasource" />
+    <None Include="Properties\DataSources\GuZhangXinXi.datasource" />
+    <None Include="Properties\DataSources\LoginUser.datasource" />
+    <None Include="Properties\DataSources\Main.datasource" />
+    <None Include="Properties\DataSources\PrintDGV.datasource" />
+    <None Include="Properties\DataSources\PrintOptions.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Qita.datasource" />
+    <None Include="Properties\DataSources\SqlHelper.datasource" />
+    <None Include="Properties\DataSources\UserInfo.datasource" />
+    <None Include="Properties\DataSources\Weiruwangsushexiangqing.datasource" />
+    <None Include="Properties\DataSources\winLogin.datasource" />
+    <None Include="Properties\DataSources\Xueshengxinxi.datasource" />
+    <None Include="Properties\DataSources\YeWuXinXi.datasource" />
+    <None Include="Properties\DataSources\Yvjing.datasource" />
+    <None Include="Properties\DataSources\ZiFeiXinXi.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
